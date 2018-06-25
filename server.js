@@ -30,9 +30,24 @@ app.set("view engine", "handlebars");
 
 
 // Connect to the Mongo DB
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Mongo_DB";
-mongoose.connect(MONGODB_URI);
-mongoose.Promise = Promise;
+// const MONGODB = process.env.MONGODB || "mongodb://localhost/Mongo_DB";
+// mongoose.connect(MONGODB);
+// mongoose.Promise = Promise;
+// Connect to the Mongo DB
+// mongoose.Promise = Promise;
+// mongoose.connect(MONGODB);
+
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/MyDb", function (err, db) {
+
+  if (err) throw err;
+
+  //Write databse Insert/Update/Query code here..
+
+});
+
 
 // Routes
 
