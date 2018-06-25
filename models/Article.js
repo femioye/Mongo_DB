@@ -19,12 +19,6 @@ const ArticleSchema = new Schema({
 
   },
 
-  // `body content` is required and of type string 
-  content: {
-    type: String,
-
-  },
-
   // saved is a boolean and by default false
   saved: {
     type: Boolean,
